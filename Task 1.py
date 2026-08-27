@@ -62,5 +62,6 @@ lines = cv2.HoughLinesP(roi, 2, np.pi/180, 100, np.array([]), minLineLength=40, 
 average_lines = average_slope(lane_image, lines)
 line_image = display_lines(lane_image, average_lines)
 final_image = cv2.addWeighted(lane_image, 0.8, line_image, 2, 2)
+cv2.imwrite("c:\\Users\\Dell\\Desktop\\Soumye Chauhan 26-B3-39\\output.png", final_image)       
 cv2.imshow ("image", final_image)
 cv2.waitKey(0)
