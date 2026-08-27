@@ -103,11 +103,11 @@ def draw_lane(original_img, warped_binary, left_fit, right_fit, Minv):
     return cv2.addWeighted(original_img, 1, newwarp, 0.3, 0)
 
 
-image_path = r"C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\3 (1).png"
+image_path = r"C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\Task 2\3 (1).png"
 image = cv2.imread(image_path)
 
 if image is None:
-    print(r"C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\ 3 (1).png")
+    print(r"C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\Task 2\3 (1).png)")
 else:
     binary_img = pipeline(image)
     warped_img, Minv = warp(binary_img)
@@ -115,7 +115,7 @@ else:
     final_output = draw_lane(image, warped_img, left_fit, right_fit, Minv)
 
     
-    cv2.imwrite("output_detected_lane.jpg", final_output)
+    cv2.imwrite(r"C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\Task 2\output_detected_lane.jpg", final_output)
 
     cv2.imshow("Original Image", image)
     cv2.imshow("Detected Curved Lane", final_output)
