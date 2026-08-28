@@ -115,7 +115,7 @@ else:
     final_output = draw_lane(image, warped_img, left_fit, right_fit, Minv)
 
     
-    cv2.imwrite(r"C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\Task 2\output_detected_lane.jpg", final_output)
+    cv2.imwrite(r"C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\Task 2\Output\output_detected_lane.jpg", final_output)
 
     cv2.imshow("Original Image", image)
     cv2.imshow("Detected Curved Lane", final_output)

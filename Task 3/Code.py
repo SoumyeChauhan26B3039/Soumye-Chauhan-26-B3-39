@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-image = cv2.imread(r'C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\1.png')
+image = cv2.imread(r'C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\Task 3\1.png')
 image = cv2.resize(image, (800, 600))
 output = image.copy()
 
@@ -42,5 +42,6 @@ for i, contour in enumerate(contours):
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
 cv2.imshow('Pothole Bounding Boxes & Coordinates', output)
+cv2.imwrite(r'C:\Users\Dell\Desktop\Soumye Chauhan 26-B3-39\Task 3\Output\output_potholes.jpg', output)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
